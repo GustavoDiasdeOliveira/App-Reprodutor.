@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Breeder | App Musica Responsivo</title>
+</head>
+<body>
+    
+    <div class="player">
+        <div class="wrapper">
+            <div class="details">
+                <div class="now-playing">PLAYING x OF y</div>
+                <div class="track-art"></div>
+                <div class="track-name">Track Name</div>
+                <div class="track-artist">Track Artist</div>
+            </div><!--details-->
+ 
+            <div class="slider_container">
+                <div class="current-time"><b>00:00</b></div>
+                 <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                 <div class="total-duration"><b>00:00</b></div>
+            </div><!--slider_container-->
+ 
+            <div class="slider_container">
+                <i class="fa fa-volume-down"></i>
+                 <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                 <i class="fa fa-volume-up"></i>
+            </div><!--slider_container-->
+ 
+            <div class="buttons">
+                <div class="random-track" onclick="randomTrack()">
+                    <i class="fas fa-random fa-2x" title="random"></i>
+                </div><!--random-track-->
+
+                <div class="prev-track" onclick="prevTrack()">
+                     <i class="fa fa-step-backward fa-2x"></i>
+                 </div><!--prev-track-->
+
+                 <div class="playpause-track" onclick="playpauseTrack()">
+                     <i class="fa fa-play-circle fa-5x"></i>
+                 </div><!--playpause-track-->
+                 
+                 <div class="next-track" onclick="nextTrack()">
+                     <i class="fa fa-step-forward fa-2x"></i>
+                 </div><!--next-track-->
+                 
+                 <div class="repeat-track" onclick="repeatTrack()">
+                     <i class="fa fa-repeat fa-2x" title="repeat"></i>
+                 </div>
+            </div><!--repeat-track-->
+ 
+             <div id="wave">
+                 <span class="stroke"></span>
+                 <span class="stroke"></span>
+                 <span class="stroke"></span>
+                 <span class="stroke"></span>
+                 <span class="stroke"></span>
+                 <span class="stroke"></span>
+                 <span class="stroke"></span>
+             </div><!--wave-->
+        </div>
+    </div>
+
+
+    <script src="script.js" defer></script>
+</body>
+</html>
